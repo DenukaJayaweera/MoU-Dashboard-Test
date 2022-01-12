@@ -11,14 +11,19 @@ import Sidebar from './Component/Sidebar';
 function App() {
   return (
     <Router>
-      <Sidebar />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/mous" element={<MoUs />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+      <div className="row">
+        <div className="col">
+          <Sidebar />
+        </div>
+        <div className="col">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/mous" element={<MoUs />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </div>
+      </div>
     </Router>
   );
 }

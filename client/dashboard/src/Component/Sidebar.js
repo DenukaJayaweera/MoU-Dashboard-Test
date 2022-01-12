@@ -14,19 +14,19 @@ function Sidebar() {
       <ul>
         <li>
           <Link to="/">
-            <AiFillHome />
+            <AiFillHome className="m-1" />
             Home
           </Link>
         </li>
         <li>
           <Link to="/mous">
-            <RiPagesLine />
+            <RiPagesLine className="m-1" />
             MoUs
           </Link>
         </li>
         <li>
           <Link to="/users">
-            <FaUsers />
+            <FaUsers className="m-1" />
             Users
           </Link>
         </li>
