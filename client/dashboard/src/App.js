@@ -7,7 +7,7 @@ import Home from './Pages/Home';
 import Users from './Pages/Users';
 import MoUs from './Pages/MoUs';
 import ErrorPage from './Pages/ErrorPage';
-import Country from './Pages/Country/Country';
+import Country from './Pages/Country';
 // Changed the route to a new directory
 import Faculty from './Pages/Faculty';
 import Partners from './Pages/Partners';
@@ -20,10 +20,10 @@ function App() {
     <Router>
       <div className="row">
         {/* Changed the size of the column */}
-        <div className="col-3">
+        <div className="col-2">
           <Sidebar />
         </div>
-        <div className="col-9">
+        <div className="col-10">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/users" element={<Users />} />
