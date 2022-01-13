@@ -1,10 +1,17 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
+//testing the database
+app.use(express.json());
+app.use(cors());
 
-app.listen(3001, () => {
-  console.log('Running on Port 3001...');
+const country = require('./Routes/Country');
+
+app.use('/country', country);
+// Defining the PORT number
+const port = process.env.PORT || 3001;
+
+app.listen(port, () => {
+  console.log(`Listening to port ${port}...`);
 });
