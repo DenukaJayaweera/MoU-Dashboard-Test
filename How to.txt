@@ -11,10 +11,14 @@ Hosting a Reactapp in Linux
 	
 Client - FrontEnd 
 	npx create-react-app name
-
 	to make requests to the APIs 
 		Axios
 		   yarn install axios	
+
+Creating a CRUD application
+	https://www.youtube.com/watch?v=T8mqZZ0r-RA&t=129s
+	https://www.youtube.com/watch?v=3YrOOia3-mo
+	
 
 Server - BackEnd
 	npm init
