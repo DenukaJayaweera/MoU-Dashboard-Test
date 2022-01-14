@@ -14,10 +14,14 @@ import Partners from './Pages/Partners';
 import Coordinators from './Pages/Coordinators';
 
 import Sidebar from './Component/Sidebar';
+import TopBar from './Component/TopBar';
 
 function App() {
   return (
     <Router>
+      <div className="row">
+        <TopBar />
+      </div>
       <div className="row">
         {/* Changed the size of the column */}
         <div className="col-2">

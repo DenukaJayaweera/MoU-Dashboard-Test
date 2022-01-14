@@ -1,0 +1,204 @@
+.header-nav-bar {
+  height: 60px;
+  background: #9e1b0e;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+.site-logo {
+  width: 170px;
+  min-width: 32px;
+  margin: 0 18px 0 15px;
+}
+
+.site-logo path {
+  fill: #fff;
+}
+
+.site-title {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.header-search {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.topNav-dropdown {
+  height: 40px;
+  /* width: 40px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_dropdown button {
+  background-color: #007bff00 !important;
+  border-color: #007bff00 !important;
+  border: none !important;
+}
+
+.profile_dropdown .btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 0%);
+}
+
+.collapse-btn-nav-bar svg {
+  color: white;
+  background-color: var(--mid-brown);
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  z-index: 100;
+  cursor: pointer;
+  margin-left: -20px;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.notification-topbar {
+  background-color: #007bff00 !important;
+  border-color: #007bff00 !important;
+  border: none !important;
+}
+
+.notification-div {
+  position: relative;
+}
+
+.notification-div .notification-number {
+  position: absolute !important;
+  top: -5px !important;
+  right: -10px !important;
+}
+
+.profile_dropdown span {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.dropdown-force-style .btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgb(255 255 255 / 0%) !important;
+}
+
+.dropdown-force-style .btn-primary:focus,
+.dropdown-force-style .btn-primary.focus {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  box-shadow: 0 0 0 0.2rem rgb(255 255 255 / 0%) !important;
+}
+
+.notification-link-btn {
+  text-decoration: none !important;
+  color: var(--dark-blue);
+}
+
+.notification-link-btn:hover {
+  color: var(--dark-blue);
+}
+/* 
+  .topNav-dropdown-notification .dropdown-item {
+    padding: 20px 20px;
+    background-color: var(--mid-brown-1);
+    border-bottom: 3px solid var(--dark-blue);
+  }
+  
+  .topNav-dropdown-notification .dropdown-item:active {
+    padding: 20px 20px;
+    background-color: var(--mid-brown-1);
+    border-bottom: 3px solid var(--dark-blue);
+  } */
+
+.topNav-dropdown-notification .dropdown-menu.show {
+  padding: 10px;
+  /* border-left: 3px solid var(--dark-blue);
+    border-right: 3px solid var(--dark-blue);
+    border-top: 3px solid var(--dark-blue);
+    border-radius: 0px; */
+}
+
+.topNav-dropdown-notification .media {
+  /* border-bottom: 1px solid #ddd; */
+  padding: 8px 12px;
+}
+
+.topNav-dropdown-notification .dropdown-menu li a {
+  position: relative;
+  padding: 8px 0px;
+  text-decoration: none;
+}
+
+.topNav-dropdown-notification .media-left {
+  padding-right: 10px;
+}
+
+.topNav-dropdown-notification .media-body,
+.topNav-dropdown-notification .media-left,
+.topNav-dropdown-notification .media-right {
+  display: table-cell;
+  vertical-align: top;
+}
+.topNav-dropdown-notification .bell-notification img {
+  width: 40px;
+}
+
+.topNav-dropdown-notification .img-circle {
+  border-radius: 50%;
+}
+.topNav-dropdown-notification img {
+  vertical-align: middle;
+}
+.topNav-dropdown-notification img {
+  border-style: none;
+}
+.topNav-dropdown-notification .media-body,
+.topNav-dropdown-notification .media-left,
+.topNav-dropdown-notification .media-right {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.topNav-dropdown-notification .media-body {
+  width: 250px;
+}
+.topNav-dropdown-notification .media,
+.topNav-dropdown-notification .media-body {
+  overflow: hidden;
+}
+.topNav-dropdown-notification
+  .main-header-top
+  .top-nav
+  .notification-menu
+  .media
+  .block:not(.text-muted) {
+  font-weight: 500;
+}
+
+.topNav-dropdown-notification .bell-notification .block {
+  color: #777;
+}
+.topNav-dropdown-notification .block {
+  display: block;
+}
+.topNav-dropdown-notification .bell-notification .block-time {
+  font-size: 12px;
+  display: none;
+}
+
+.topNav-dropdown-notification .text-muted {
+  color: #818a91 !important;
+}
