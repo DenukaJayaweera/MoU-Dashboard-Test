@@ -8,7 +8,6 @@ import Users from './Pages/Users';
 import MoUs from './Pages/MoUs';
 import ErrorPage from './Pages/ErrorPage';
 import Country from './Pages/Country';
-// Changed the route to a new directory
 import Faculty from './Pages/Faculty';
 import Partners from './Pages/Partners';
 import Coordinators from './Pages/Coordinators';
@@ -23,7 +22,6 @@ function App() {
         <TopBar />
       </div>
       <div className="row">
-        {/* Changed the size of the column */}
         <div className="col-2">
           <Sidebar />
         </div>
