@@ -6,12 +6,14 @@ import CountryTable from '../Tables/CountryTable';
 function Country() {
   return (
     <div>
-      <div className="row">
-        <Link to="form">
-          <button className="btn btn-primary">Add Country</button>
-        </Link>
+      <div className="row justify-content-end p-3">
+        <div className="col-2">
+          <Link to="form">
+            <button className="btn btn-primary">Add Country</button>
+          </Link>
+        </div>
       </div>
-      <div className="row">
+      <div className="row p-2">
         <CountryTable />
       </div>
     </div>
