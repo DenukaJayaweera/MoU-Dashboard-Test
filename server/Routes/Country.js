@@ -8,7 +8,6 @@ const router = express.Router();
 router.post('/form/insert', (req, res) => {
   const countryName = req.body.countryName;
   const countryCode = req.body.countryCode;
-  console.log(countryName);
 
   connection.query(
     'INSERT INTO Country(CountryName,CountryCode) VALUES (?,?)',
