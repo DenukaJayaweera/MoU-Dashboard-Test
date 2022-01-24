@@ -41,3 +41,6 @@ Setting Port in React
 
 Notes
 //Delete Cant Pass a body
+
+Use Effect 
+https://www.youtube.com/watch?v=rH0jRfazHq4

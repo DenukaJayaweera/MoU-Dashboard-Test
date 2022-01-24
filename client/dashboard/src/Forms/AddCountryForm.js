@@ -9,7 +9,7 @@ function AddCountryForm() {
   const [CountryCode, setCountryCode] = useState('');
 
   const submitCountry = () => {
-    Axios.post(`${global.url}/country/insert`, {
+    Axios.post(`${global.url}/country/form/insert`, {
       countryName: Country,
       countryCode: CountryCode,
     }).then(() => {

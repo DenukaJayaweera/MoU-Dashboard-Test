@@ -4,9 +4,11 @@ const connection = config.connection;
 const express = require('express');
 const router = express.Router();
 
-router.post('/insert', (req, res) => {
+//localhost/country/insert
+router.post('/form/insert', (req, res) => {
   const countryName = req.body.countryName;
   const countryCode = req.body.countryCode;
+  console.log(countryName);
 
   connection.query(
     'INSERT INTO Country(CountryName,CountryCode) VALUES (?,?)',
