@@ -12,6 +12,8 @@ import Faculty from './Pages/Faculty';
 import Partners from './Pages/Partners';
 import Coordinators from './Pages/Coordinators';
 
+import AddCountryForm from './Forms/AddCountryForm';
+
 import Sidebar from './Component/Sidebar';
 import TopBar from './Component/TopBar';
 
@@ -31,6 +33,7 @@ function App() {
             <Route path="/users" element={<Users />} />
             <Route path="/mous" element={<MoUs />} />
             <Route path="/country" element={<Country />} />
+            <Route path="/country/form" element={<AddCountryForm />} />
             <Route path="/faculty" element={<Faculty />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/coordinators" element={<Coordinators />} />

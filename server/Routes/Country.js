@@ -5,7 +5,7 @@ const express = require('express');
 const router = express.Router();
 
 //localhost/country/insert
-router.post('/insert', (req, res) => {
+router.post('/form/insert', (req, res) => {
   const countryName = req.body.countryName;
   const countryCode = req.body.countryCode;
   console.log(countryName);

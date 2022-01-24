@@ -1,13 +1,15 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-import AddCountryForm from '../Forms/AddCountryForm';
 import CountryTable from '../Tables/CountryTable';
 
 function Country() {
   return (
     <div>
       <div className="row">
-        <AddCountryForm />
+        <Link to="form">
+          <button className="btn btn-primary">Add Country</button>
+        </Link>
       </div>
       <div className="row">
         <CountryTable />
