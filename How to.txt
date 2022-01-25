@@ -18,6 +18,7 @@ Client - FrontEnd
 Creating a CRUD application
 	https://www.youtube.com/watch?v=T8mqZZ0r-RA&t=129s
 	https://www.youtube.com/watch?v=3YrOOia3-mo
+	https://www.youtube.com/watch?v=_S2GKnFpdtE
 	
 
 Server - BackEnd
