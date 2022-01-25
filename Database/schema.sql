@@ -3,5 +3,5 @@ USE DASHBOARD;
 
 CREATE TABLE Country(
     CountryName Char(60),
-    CountryCode char(3) not null Primary key
+    CountryCode char(2) not null Primary key
 )

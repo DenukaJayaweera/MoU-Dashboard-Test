@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
+import ReactCountryFlag from 'react-country-flag';
 
 import { AiOutlineDelete } from 'react-icons/ai';
 import { FaInfo } from 'react-icons/fa';
@@ -33,6 +34,16 @@ function CountryTable() {
     return (
       <tr key={key}>
         <td className="col-1">{key + 1}</td>
+        <td className="col-1">
+          <ReactCountryFlag
+            countryCode={`${val.CountryCode}`}
+            svg
+            style={{
+              width: '1.5em',
+              height: '1.5em',
+            }}
+          />
+        </td>
         <td className="col-2">{val.CountryCode}</td>
         <td>{val.CountryName}</td>
         <td className="col-1">
@@ -60,6 +71,7 @@ function CountryTable() {
         <thead>
           <tr>
             <th scope="col">#</th>
+            <th scope="col">Flag</th>
             <th scope="col">Code</th>
             <th scope="col">Country Name</th>
             <th scope="col">Delete</th>
