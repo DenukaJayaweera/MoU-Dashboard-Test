@@ -6,3 +6,7 @@
 .dbtable {
   font-family: 'Montserrat', sans-serif;
 }
+
+.dbtable tr {
+  text-align: center;
+}

@@ -25,4 +25,17 @@ router.get('/', (req, res) => {
   });
 });
 
+router.delete('/delete/:countryCode', (req, res) => {
+  const countryCode = req.params.countryCode;
+
+  connection.query(
+    'DELETE FROM Country WHERE countryCode = ?',
+    [countryCode],
+    (err, result) => {
+      if (err) return res.status(500).send('Database Failure');
+      return res.send(result);
+    }
+  );
+});
+
 module.exports = router;

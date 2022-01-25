@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 
+import { AiOutlineDelete } from 'react-icons/ai';
+import { FaInfo } from 'react-icons/fa';
+
 import('../Styles/table.css');
 
 function CountryTable() {
@@ -12,6 +15,16 @@ function CountryTable() {
     });
   };
 
+  const deleteCountry = (countryCode) => {
+    Axios.delete(`${global.url}/country/delete/${countryCode}`).then(
+      (response) => {
+        if (response.status === 500) {
+          console.log(response.status);
+        }
+      }
+    );
+  };
+
   useEffect(() => {
     getCountry();
   });
@@ -19,10 +32,24 @@ function CountryTable() {
   const renCountryList = (val, key) => {
     return (
       <tr key={key}>
-        <td>{key + 1}</td>
-        <td>{val.CountryCode}</td>
+        <td className="col-1">{key + 1}</td>
+        <td className="col-2">{val.CountryCode}</td>
         <td>{val.CountryName}</td>
-        <td>Dlt</td>
+        <td className="col-1">
+          <button
+            className="btn btn-danger"
+            onClick={() => {
+              deleteCountry(val.CountryCode);
+            }}
+          >
+            <AiOutlineDelete size={24} />
+          </button>
+        </td>
+        <td className="col-1">
+          <button className="btn btn-primary">
+            <FaInfo size={20} />
+          </button>
+        </td>
       </tr>
     );
   };
@@ -34,8 +61,9 @@ function CountryTable() {
           <tr>
             <th scope="col">#</th>
             <th scope="col">Code</th>
-            <th scope="col">Name</th>
+            <th scope="col">Country Name</th>
             <th scope="col">Delete</th>
+            <th scope="col">Info</th>
           </tr>
         </thead>
         <tbody>{countryList.map(renCountryList)}</tbody>
