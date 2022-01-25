@@ -40,7 +40,7 @@ function AddCountryForm() {
             <input
               class="form-control"
               type="text"
-              placeholder="Enter 3 Letter Country Code in Capital Letters"
+              placeholder="Use Alpha 2 Notation - https://laendercode.net/en/2-letter-list.html"
               onChange={(e) => {
                 setCountryCode(e.target.value);
               }}
