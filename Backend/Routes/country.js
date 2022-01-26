@@ -4,7 +4,7 @@ const connection = config.connection;
 const express = require('express');
 const router = express.Router();
 
-router.post('/insert', (req, res) => {
+router.post('/form/insert', (req, res) => {
   const CountryName = req.body.countryName;
   const CountryCode = req.body.countryCode;
 
@@ -15,6 +15,13 @@ router.post('/insert', (req, res) => {
       res.send('entry successful');
     }
   );
+});
+
+router.get('/', (req, res) => {
+  connection.query('SELECT * FROM Country', (err, result) => {
+    if (err) return res.status(500).send('Database Failure');
+    res.send(result);
+  });
 });
 
 module.exports = router;

@@ -29,9 +29,9 @@ function CountryTable() {
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">Code</th>
-            <th scope="col">Name</th>
+            <th scope="col-1">#</th>
+            <th scope="col-3">Code</th>
+            <th scope="col-4">Name</th>
           </tr>
         </thead>
         <tbody>{countryList.map(renderCountryList)}</tbody>
