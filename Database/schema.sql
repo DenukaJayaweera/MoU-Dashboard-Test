@@ -7,8 +7,8 @@ CREATE TABLE Country(
 );
 
 CREATE TABLE Faculty (
-                          faculty_id varchar(36) not null primary key,
-                          faculty_name varchar(36),
-                          email varchar(36),
-                          phone_number varchar(16)
+    faculty_id varchar(36) not null primary key,
+    faculty_name varchar(36),
+    email varchar(36),
+    phone_number varchar(16)
 );
