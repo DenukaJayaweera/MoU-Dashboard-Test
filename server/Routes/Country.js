@@ -1,5 +1,5 @@
 const config = require('../config/databaseConfig');
-const connection = config.connection;
+const connection = config.connection; //connect to the database
 
 const express = require('express');
 const router = express.Router();
@@ -8,7 +8,6 @@ const router = express.Router();
 router.post('/form/insert', (req, res) => {
   const countryName = req.body.countryName;
   const countryCode = req.body.countryCode;
-  console.log(countryName);
 
   connection.query(
     'INSERT INTO Country(CountryName,CountryCode) VALUES (?,?)',
@@ -24,6 +23,19 @@ router.get('/', (req, res) => {
     if (err) return res.status(500).send('Database Failure');
     res.send(result);
   });
+});
+
+router.delete('/delete/:countryCode', (req, res) => {
+  const countryCode = req.params.countryCode;
+
+  connection.query(
+    'DELETE FROM Country WHERE countryCode = ?',
+    [countryCode],
+    (err, result) => {
+      if (err) return res.status(500).send('Database Failure');
+      return res.send(result);
+    }
+  );
 });
 
 module.exports = router;

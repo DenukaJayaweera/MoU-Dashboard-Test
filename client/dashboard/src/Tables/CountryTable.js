@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
+import ReactCountryFlag from 'react-country-flag';
+
+import { AiOutlineDelete } from 'react-icons/ai';
+import { FaInfo } from 'react-icons/fa';
+
+import('../Styles/table.css');
 
 function CountryTable() {
   const [countryList, setCountryList] = useState([]);
@@ -10,31 +16,69 @@ function CountryTable() {
     });
   };
 
+  const deleteCountry = (countryCode) => {
+    Axios.delete(`${global.url}/country/delete/${countryCode}`).then(
+      (response) => {
+        if (response.status === 500) {
+          console.log(response.status);
+        }
+      }
+    );
+  };
+
   useEffect(() => {
     getCountry();
   });
 
-  const renderCountryList = (val, key) => {
+  const renCountryList = (val, key) => {
     return (
       <tr key={key}>
-        <td>{key}</td>
-        <td>{val.CountryCode}</td>
+        <td className="col-1">{key + 1}</td>
+        <td className="col-1">
+          <ReactCountryFlag
+            countryCode={`${val.CountryCode}`}
+            svg
+            style={{
+              width: '1.5em',
+              height: '1.5em',
+            }}
+          />
+        </td>
+        <td className="col-2">{val.CountryCode}</td>
         <td>{val.CountryName}</td>
+        <td className="col-1">
+          <button
+            className="btn btn-danger"
+            onClick={() => {
+              deleteCountry(val.CountryCode);
+            }}
+          >
+            <AiOutlineDelete size={24} />
+          </button>
+        </td>
+        <td className="col-1">
+          <button className="btn btn-primary">
+            <FaInfo size={20} />
+          </button>
+        </td>
       </tr>
     );
   };
 
   return (
     <div>
-      <table class="table table-bordered">
+      <table class="table table-bordered dbtable">
         <thead>
           <tr>
-            <th scope="col-1">#</th>
-            <th scope="col-3">Code</th>
-            <th scope="col-4">Name</th>
+            <th scope="col">#</th>
+            <th scope="col">Flag</th>
+            <th scope="col">Code</th>
+            <th scope="col">Country Name</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Info</th>
           </tr>
         </thead>
-        <tbody>{countryList.map(renderCountryList)}</tbody>
+        <tbody>{countryList.map(renCountryList)}</tbody>
       </table>
     </div>
   );

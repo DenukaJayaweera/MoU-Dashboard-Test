@@ -18,6 +18,7 @@ Client - FrontEnd
 Creating a CRUD application
 	https://www.youtube.com/watch?v=T8mqZZ0r-RA&t=129s
 	https://www.youtube.com/watch?v=3YrOOia3-mo
+	https://www.youtube.com/watch?v=_S2GKnFpdtE
 	
 
 Server - BackEnd
@@ -44,3 +45,16 @@ Notes
 
 Use Effect 
 https://www.youtube.com/watch?v=rH0jRfazHq4
+
+Rendering data to the FrontEnd from data base
+1.Create the schema & data 
+2.Execute in the local database(workbench)
+3.creating the route
+	a.connecting to the database by databaseconfig
+	b.require express
+	c.export the module
+4.reqiure the route module & use the module
+5.creating the get request to show all the data
+6.check using postman(Data is fetched to the backend ,API is correct)
+7.Creating the table in the frontend
+8.import the table to the page & create the table with bootstrap

@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+/* font-family: 'Dongle', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+.dbtable {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dbtable tr {
+  text-align: center;
+}
