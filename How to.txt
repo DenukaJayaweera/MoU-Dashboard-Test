@@ -53,7 +53,7 @@ Rendering data to the FrontEnd from data base
 	a.connecting to the database by databaseconfig
 	b.require express
 	c.export the module
-4.reqiure the route module & use the module
+4.require the route module & use the module
 5.creating the get request to show all the data
 6.check using postman(Data is fetched to the backend ,API is correct)
 7.Creating the table in the frontend
