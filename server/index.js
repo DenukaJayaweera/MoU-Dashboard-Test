@@ -10,7 +10,9 @@ app.use(cors());
 
 const country = require('./Routes/Country');
 const faculty = require('./Routes/Faculty');
+const Users = require('./Routes/Users');
 
+app.use('/users', Users);
 app.use('/country', country); //url
 app.use('/faculty', faculty);
 // Defining the PORT number

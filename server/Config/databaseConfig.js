@@ -3,7 +3,8 @@ const mysql = require('mysql2');
 config = {
   host: 'localhost',
   user: 'root',
-  password: 'password', //password
+  password: 'U761F9JS',
+  //password,U761F9JS
   database: 'dashboard',
 };
 
