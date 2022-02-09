@@ -21,7 +21,7 @@ function UsersTable() {
     return (
       <tr key={key}>
         <td className="col-1">{key + 1}</td>
-        <td className="col-1">{val.first_name}</td>
+        <td className="col-2">{val.first_name}</td>
         <td className="col-2">{val.last_name}</td>
         <td className="col-2">{val.role_name}</td>
         <td className="col-1">

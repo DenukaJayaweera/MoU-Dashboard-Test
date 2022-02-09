@@ -3,6 +3,8 @@ import Axios from 'axios';
 import '../Styles/table.css';
 import { useState, useEffect } from 'react';
 
+import { FaInfo } from 'react-icons/fa';
+
 function FacultyTable() {
   const [facultyList, setFacultyList] = useState([]);
 
@@ -19,10 +21,14 @@ function FacultyTable() {
     return (
       <tr key={key}>
         <td className="col-1">{key + 1}</td>
-        <td className="col-1">{val.faculty_name}</td>
+        <td className="col-3">{val.faculty_name}</td>
         <td className="col-2">{val.email}</td>
         <td className="col-2">{val.phone_number}</td>
-        <td className="col-1">Info</td>
+        <td className="col-1">
+          <button className="btn btn-primary">
+            <FaInfo size={20} />
+          </button>
+        </td>
       </tr>
     );
   };

@@ -1,10 +1,14 @@
 import react from 'react';
 import FacultyTable from '../Tables/FacultyTable';
 
+import '../Styles/main.css';
+
 function Faculty() {
   return (
     <div>
-      <div>Faculty Page</div>
+      <div className="row  p-3">
+        <div className="col pageHeader ">Faculties</div>
+      </div>
       <div>
         <FacultyTable />
       </div>
