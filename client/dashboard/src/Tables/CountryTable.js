@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
-import ReactCountryFlag from 'react-country-flag';
+import _ from 'lodash';
 
+import ReactCountryFlag from 'react-country-flag';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { FaInfo } from 'react-icons/fa';
 
 import('../Styles/table.css');
 
+const pageSize = 6;
+
 function CountryTable() {
   const [countryList, setCountryList] = useState([]);
+  const [paginationCountry, setPaginationCountry] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const getCountry = () => {
     Axios.get(`${global.url}/country`).then((response) => {
       setCountryList(response.data);
+      setPaginationCountry(_(response.data).slice(0).take(pageSize).value());
     });
   };
 
@@ -29,6 +35,20 @@ function CountryTable() {
   useEffect(() => {
     getCountry();
   });
+
+  const pageCount = countryList ? Math.ceil(countryList.length / pageSize) : 0;
+  if (pageCount === 1) return null;
+  const pages = _.range(1, pageCount + 1);
+
+  const pagination = (pageNum) => {
+    setCurrentPage(pageNum);
+    const startIndex = (pageNum - 1) * pageSize;
+    const paginatedCountry = _(countryList)
+      .slice(startIndex)
+      .take(pageSize)
+      .value();
+    setPaginationCountry(paginatedCountry);
+  };
 
   const renCountryList = (val, key) => {
     return (
@@ -78,8 +98,28 @@ function CountryTable() {
             <th scope="col">Info</th>
           </tr>
         </thead>
-        <tbody>{countryList.map(renCountryList)}</tbody>
+        <tbody>{paginationCountry.map(renCountryList)}</tbody>
       </table>
+      <nav className="d-flex justify-content-center">
+        <ul className="pagination">
+          {pages.map((page) => (
+            <li
+              className={
+                page === currentPage ? 'page-item active' : 'page-item'
+              }
+            >
+              <p
+                className="page-link"
+                onClick={() => {
+                  pagination(page);
+                }}
+              >
+                {page}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
   );
 }
